@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a simple single page application that allows users to practice prayer flicking boss monsters found in [Old School Runescape](https://oldschool.runescape.com/). It can be used to practice two tick flicking, one tick flicking, or lazy flicking. Every cycle (or tick) is 0.6 seconds long. Monsters turn red on the tick they attack. The app includes a mutable metronome to help users get into a rhythm with their prayer flicking, and also includes a toggle setting to show when the 'blob' is detecting their prayer. There is also a tick counter that records the users personal best times.
+This is a simple single page application that allows users to practice prayer flicking boss monsters found in [Old School Runescape](https://oldschool.runescape.com/). It can be used to practice two tick flicking, one tick flicking, or lazy flicking. Every cycle (or tick) is 0.6 seconds long. Monsters turn red on the tick they attack, and do 10 damage for each hit not prayed against. The app includes a mutable metronome to help users get into a rhythm with their prayer flicking, and also includes a toggle setting to show when the 'blob' is detecting their prayer. There is also a tick counter that records the users personal best times.
 
 ## Netlify Link
 
