@@ -106,7 +106,6 @@ function App() {
     setRangerBackground('transparent')
     setBlobDetecting(false)
     setCurrentHP(99)
-    setMetronomeMuted(false)
   }
 
   if (currentHP < 0) {
