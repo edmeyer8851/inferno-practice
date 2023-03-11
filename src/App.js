@@ -28,6 +28,7 @@ function App() {
   const [rangerBackground, setRangerBackground] = useState('transparent')
   const [personalBest, setPersonalBest] = useState(0)
   const [metronomeMuted, setMetronomeMuted] = useState(false)
+  const [hideBlobDetecting, setHideBlobDetecting] = useState(false)
   const [damageMessages, setDamageMessages] = useState([])
 
 
@@ -52,7 +53,7 @@ function App() {
         blobAttack()
       } 
       if (timer!=0 && timer%3 === 0 && timer%6 != 0){
-        setBlobDetecting(!blobDetecting)
+        if (!hideBlobDetecting) setBlobDetecting(!blobDetecting)
         blobDetectPrayer()
       }
     }
@@ -152,8 +153,14 @@ function App() {
         <p>{`Personal Best: ${personalBest} ticks`}</p>
         <p>First attack from both is always on tick 0. Pray ranged before clicking start.</p>
       </TextContainer>
-      <label htmlFor='muteMetronome'>Mute Metronome</label>
+      <CheckboxContainer>
+        <label htmlFor='muteMetronome'>Mute Metronome</label>
         <input id="muteMetonome" type='checkbox' checked={metronomeMuted} onChange={e => setMetronomeMuted(e.currentTarget.checked)}></input>
+      </CheckboxContainer>
+      <CheckboxContainer>
+        <label htmlFor='hideBlobDetecting'>Hide Blob Detecting Prayer</label>
+        <input id="hideBlobDetecting" type='checkbox' checked={hideBlobDetecting} onChange={e => setHideBlobDetecting(e.currentTarget.checked)}></input>
+      </CheckboxContainer>
     </Container>
   );
 }
@@ -215,6 +222,10 @@ const TextContainer = styled.div`
   margin-top: 25px;
   flex-direction: column;
   align-items: center;
+`
+
+const CheckboxContainer = styled.div`
+  display: flex
 `
 
 export default App;
