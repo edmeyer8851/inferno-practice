@@ -106,6 +106,7 @@ function App() {
   }
 
   const setDefaults = () => {
+    if (timer > personalBest) setPersonalBest(timer)
     setTimer(-1)
     setStarted(false)
     setCurrentPrayer('')
