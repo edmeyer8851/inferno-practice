@@ -18,7 +18,7 @@ function App() {
   const click1 = new Audio(sound)
   click1.volume = 0.1
   
-  const [timer, setTimer] = useState(-1)
+  const [timer, setTimer] = useState(-2)
   const [started, setStarted] = useState(false)
   const [currentHP, setCurrentHP] = useState(99)
   const [currentPrayer, setCurrentPrayer] = useState("")
@@ -57,15 +57,6 @@ function App() {
       }
     }
   }, [timer])
-
-  // useEffect(() => {
-  //   if (started){
-  //     const id = setInterval(() => setTimer(timer => timer + 1), TICK_RATE)
-  //     return () => {
-  //       clearInterval(id);
-  //     };
-  //   }
-  // },[started])
 
   const handlePrayerCLick = e => {
     if (!currentPrayer || (currentPrayer && currentPrayer!==e.target.id)) {
@@ -107,7 +98,7 @@ function App() {
 
   const setDefaults = () => {
     if (timer > personalBest) setPersonalBest(timer)
-    setTimer(-1)
+    setTimer(-2)
     setStarted(false)
     setCurrentPrayer('')
     setBlobAttackStyle('range')
