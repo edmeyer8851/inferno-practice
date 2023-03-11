@@ -29,8 +29,6 @@ function App() {
   const [personalBest, setPersonalBest] = useState(0)
   const [metronomeMuted, setMetronomeMuted] = useState(false)
   const [hideBlobDetecting, setHideBlobDetecting] = useState(false)
-  const [damageMessages, setDamageMessages] = useState([])
-
 
   const TICK_RATE = 600
   
