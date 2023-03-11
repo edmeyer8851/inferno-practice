@@ -187,7 +187,7 @@ const MobsContainer = styled.div`
 `
 const MobContainer = styled.div`
   background: red;
-  width: fit-content
+  width: fit-content;
 `
 
 const ButtonContainer = styled.div`
@@ -223,7 +223,8 @@ const TextContainer = styled.div`
 `
 
 const CheckboxContainer = styled.div`
-  display: flex
+  display: flex;
+  padding-top:10px;
 `
 
 export default App;
